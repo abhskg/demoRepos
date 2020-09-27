@@ -39,7 +39,7 @@ pipeline {
         stage ('Deployment') {
             steps {
                 withMaven(maven : 'maven_3_6_3') {
-                    bat 'mvn deploy'
+                    bat 'mvn install'
                 }
             }
         }
