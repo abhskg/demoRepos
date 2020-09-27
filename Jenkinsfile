@@ -2,6 +2,16 @@ pipeline {
     agent any
 
     stages {
+        
+        stage ('Validation') {
+
+            steps {
+                withMaven(maven : 'maven_3_6_3') {
+                    sh 'mvn validate'
+                }
+            }
+        }
+        
         stage ('Compilation') {
 
             steps {
