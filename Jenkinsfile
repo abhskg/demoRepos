@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'maven_3_6_3'
+        jdk 'JAVA_HOME' 
+    }
+    
     stages {
         
         stage ('Validation') {
